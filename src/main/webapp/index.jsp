@@ -4,16 +4,16 @@
 <%@ page import="model.GameNumber" %>    
 
 <% 
-	//Số min
+	//Số min là 1 theo đề bài
 	GameNumber minimum = new GameNumber(1);
-	//Số max
+	//Số max là 1000 theo đề bài
 	GameNumber maximum = new GameNumber(1000);
 	
-	//Số máy random
+	//Random số từ 1 - 1000
 	GameNumber target = new GameNumber();
 	target.setRandom(minimum.getValue(),maximum.getValue());
 
-	//Số lần đoán của người chơi
+	//Gán giá trị số lần đoán của người chơi là 1 khi mới bắt đầu game
 	GameNumber guesses = new GameNumber(1);
 %>
 
@@ -35,7 +35,7 @@
 				<form method="post" action="guess.jsp" name="guessForm">
 					<label class="label_input">Lần đoán <%= guesses.getValue() %>: </label>
 					
-					<input type="text" name="guess" value="0" class="input"/>
+					<input type="text" name="guess" class="input" value=0 />
 					<br/>
 					<button type="submit" name="guessButton" class="btn btn-success btn_doanSo">Go</button>
 					

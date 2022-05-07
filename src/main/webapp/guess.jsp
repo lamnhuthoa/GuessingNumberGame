@@ -4,7 +4,7 @@
 <%@ page import="model.GameNumber" %>
 
 <% 
-	//input
+	//Input
 	String userGuessStr = request.getParameter("guess");
 	GameNumber guess = new GameNumber(Integer.parseInt(userGuessStr));
 	
@@ -14,11 +14,14 @@
 	String maxGuessStr = request.getParameter("maximum");
 	GameNumber maximum = new GameNumber(Integer.parseInt(maxGuessStr));
 
+	//Số máy ngẫu nhiên
 	String targetStr = request.getParameter("target");
 	GameNumber target = new GameNumber(Integer.parseInt(targetStr));
-	
+
+	//Số lần đoán của người chơi
 	GameNumber guesses = new GameNumber(Integer.parseInt(request.getParameter("guesses")));
 
+	//Output
 	String alert = "";
 	
 	if(guess.getValue() == target.getValue()){
@@ -54,7 +57,8 @@
 				%>	
 					<p class="answer_of_target">Số ngẫu nhiên là <%= target.getValue() %></p>
 					<div class="text-center">
-						<a href="index.jsp" class="play_again_action btn btn-warning">Play again!?</a>
+						<a href="index.jsp" class="play_again_action btn btn-warning">Chơi lại</a>
+						<a href="gameover.jsp" class="play_again_action btn btn-danger">Nghỉ chơi</a>
 					</div>
 				<%
 					} else {
@@ -72,6 +76,11 @@
 						<input type="hidden" name="target" value="<%= target.getValue() %>" />
 						<input type="hidden" name="guesses" value="<%= guesses.getValue() %>" />
 					</form>
+					
+					
+					<div class="text-center">
+						<a href="index.jsp" class="play_again_action btn btn-warning">Reset</a>
+					</div>
 				<%
 					}
 				%>

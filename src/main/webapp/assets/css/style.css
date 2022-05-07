@@ -66,3 +66,9 @@ h1 {
 	font-size: 20px;
 	text-transform: uppercase;
 }
+
+.text_game_over {
+	text-align: center;
+	font-size: 25px;
+	text-transform: uppercase;
+}
