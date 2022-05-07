@@ -10,7 +10,7 @@ public class GameNumber {
 	}
 	
 	public GameNumber(int value) {
-		if(value < 0) {
+		if(value < 1) {
 			this.value = 0;
 		} else {
 			this.value = value;

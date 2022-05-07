@@ -5,7 +5,7 @@
 
 <% 
 	//Số min
-	GameNumber minimum = new GameNumber(0);
+	GameNumber minimum = new GameNumber(1);
 	//Số max
 	GameNumber maximum = new GameNumber(1000);
 	
