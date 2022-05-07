@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.game_container {
+	margin: 0 auto; 
+	width: 100vw; 
+	height: 100vh;
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	justify-content: center;
+	
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.instructions {
+	color: #006400;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.label_input {
+	font-size: 20px;
+}
+
+.game_card {
+	padding: 5rem;
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input {
+	border-radius: 0.5rem;
+	border: 1px solid #8e8e8e;
+	margin-left: 0.5rem;
+	padding: 0 0.5rem;
+}
+
+.text_alert_ketqua {
+	color: #006400;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.btn_doanSo {
+	width: 100%; 
+	margin: 0.5rem 0;
+}
+
+.answer_of_target {
+	text-align: center;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.play_again_action {
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	text-transform: uppercase;
+}
